@@ -194,3 +194,47 @@ class IterationPromptGen:
         active_str, inactive_str = self.get_str_from_categories(self.active_examples_generated, self.inactive_examples_generated)
         active_str_corrected, inactive_str_corrected = self.get_str_from_categories(self.active_examples_corrected, self.inactive_examples_corrected)
         return self.prob_context + self.attn_context + self.current_explanation + "<explanation>" + self.explanation + "</explanation>" "\n" + self.original_category + active_str + inactive_str + self.new_evidence + active_str_corrected + inactive_str_corrected + self.revision_str
+    
+@dataclass
+class ClassifyPromptGen:
+    example: str
+    token: str
+    explanation_str: str
+    context: str = "We are studying attention heads in a transformer architecture neural network. Each attention head looks for some particular thing in a short document.\n"
+    neuron_str: str = field(init=False) # 'The attention head being studied helps to predict that the next token is "{token}", but it is only active in some documents and not others.\n'
+    explanation: str = field(init=False) # "In particular, this attention head is active when the document " + explanation_str + "\n"
+    instruction: str = "\nGiven the following set of documents, use the explanation sort them into two groups based on whether the attention head is active or not.\n"
+    formatting: str = "Output the following format: \nExamples where the attention head is active:\n1. <example_1>\n2. <example_2>\n...\n\Examples where the attention head is inactive:\n1. <example_1>\n2. <example_2>\n...\n"
+
+    question: str = "Is the given example an active example? (Yes/No)\n"
+    pream: str = "The example is active when the example "
+
+
+
+    def __post_init__(self):
+        self.context = "We are studying attention heads in a transformer architecture neural network. Each attention head looks for some particular thing in a short document.\n"
+        self.neuron_str = f'The attention head being studied helps to predict that the next token is "{self.token}", but it is only active in some documents and not others.\n'
+        self.explanation = "In particular, this attention head is active when the document " + self.explanation_str + "\n"
+
+    def get_str_from_examples(self):
+
+        # return examples_str
+        return 'Example: """\n' + self.example + '\n"""'
+
+    def get_prompt(self):
+        examples_str = self.get_str_from_examples()
+
+        # return self.context + self.neuron_str + self.explanation + self.instruction + self.formatting + examples_str
+        return self.question + self.pream + self.explanation_str.replace("\n", " ") + "\n" + examples_str + "\nAnswer: "
+
+        # Essentially:
+        # We have ten documents, sort them into two groups based on the attention head.
+        # Required Format: 
+        # Examples where the attention head is active:
+        # 1. <example_1>
+        # 2. <example_2>
+        # ...
+        # Examples where the attention head is inactive:
+        # 1. <example_1>
+        # 2. <example_2>
+        # ...

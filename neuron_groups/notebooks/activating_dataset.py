@@ -28,6 +28,7 @@ class ActivatingDataset:
 
         prompt_indices = [prompt['index'] for prompt in self.markers[neuron]]
         prompts = [self.data[prompt_index]['text'] for prompt_index in prompt_indices]
+        prompts_metadata = [self.data[prompt_index]['meta']['pile_set_name'] for prompt_index in prompt_indices]
 
         prompts_tokens = [model.to_tokens(prompt, prepend_bos=False) for prompt in prompts]
         prompts_tokens_trunc = []
@@ -41,7 +42,7 @@ class ActivatingDataset:
         trunc_prompts = [model.to_string(prompt_tokens)[0] for prompt_tokens in prompts_tokens_trunc]
         if replace_newlines_with_spaces:
             trunc_prompts = [prompt.replace("\n", " ") for prompt in trunc_prompts]
-        return trunc_prompts
+        return trunc_prompts, prompts_metadata
     
 class ExplanationPrompt:
     def __init__(self, neuron, trunc_prompts, top_heads, neuron_to_token, shots_dict):
