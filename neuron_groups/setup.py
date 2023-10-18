@@ -7,4 +7,9 @@ setup(
     description='We explore neurons families in LLMs',
     author='fbarez',
     license='MIT',
+    install_requires=[
+        'transformer-lens',
+        'numpy',
+        'tiktoken',
+    ]
 )

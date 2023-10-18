@@ -1,0 +1,270 @@
+{
+    "parameters": {
+        "model_name": "gpt2-small",
+        "layers": [
+            9,
+            10,
+            11
+        ],
+        "num_neurons_per_layer": 20,
+        "rejected_neurons": [
+            [
+                9,
+                2322,
+                " \"'"
+            ],
+            [
+                9,
+                2894,
+                " 1870"
+            ],
+            [
+                11,
+                3033,
+                " mathemat"
+            ]
+        ]
+    },
+    "neurons": {
+        "(9, 5)": {
+            "token": " too",
+            "congruence": 17.85638999938965
+        },
+        "(9, 1616)": {
+            "token": " each",
+            "congruence": 17.374755859375
+        },
+        "(9, 1985)": {
+            "token": " because",
+            "congruence": 14.86491584777832
+        },
+        "(9, 1496)": {
+            "token": " such",
+            "congruence": 14.769176483154297
+        },
+        "(9, 2513)": {
+            "token": " term",
+            "congruence": 13.6304349899292
+        },
+        "(9, 1047)": {
+            "token": " does",
+            "congruence": 13.454303741455078
+        },
+        "(9, 2209)": {
+            "token": " number",
+            "congruence": 12.650336265563965
+        },
+        "(9, 1690)": {
+            "token": " by",
+            "congruence": 12.645493507385254
+        },
+        "(9, 1272)": {
+            "token": " March",
+            "congruence": 12.431953430175781
+        },
+        "(9, 2250)": {
+            "token": " while",
+            "congruence": 12.258589744567871
+        },
+        "(9, 947)": {
+            "token": " times",
+            "congruence": 11.683269500732422
+        },
+        "(9, 1360)": {
+            "token": " they",
+            "congruence": 11.223542213439941
+        },
+        "(9, 190)": {
+            "token": " them",
+            "congruence": 11.134913444519043
+        },
+        "(9, 2125)": {
+            "token": " example",
+            "congruence": 11.014501571655273
+        },
+        "(9, 202)": {
+            "token": " that",
+            "congruence": 10.964768409729004
+        },
+        "(9, 1308)": {
+            "token": " every",
+            "congruence": 10.941910743713379
+        },
+        "(9, 1341)": {
+            "token": " well",
+            "congruence": 10.810090065002441
+        },
+        "(9, 2151)": {
+            "token": " check",
+            "congruence": 10.758371353149414
+        },
+        "(9, 2355)": {
+            "token": " its",
+            "congruence": 10.577645301818848
+        },
+        "(9, 148)": {
+            "token": " any",
+            "congruence": 10.476791381835938
+        },
+        "(10, 3041)": {
+            "token": " right",
+            "congruence": 19.740808486938477
+        },
+        "(10, 1122)": {
+            "token": " way",
+            "congruence": 18.580839157104492
+        },
+        "(10, 2124)": {
+            "token": " there",
+            "congruence": 18.431888580322266
+        },
+        "(10, 1687)": {
+            "token": " out",
+            "congruence": 17.673398971557617
+        },
+        "(10, 2714)": {
+            "token": " one",
+            "congruence": 17.389928817749023
+        },
+        "(10, 1272)": {
+            "token": " so",
+            "congruence": 17.000736236572266
+        },
+        "(10, 2467)": {
+            "token": " than",
+            "congruence": 16.754207611083984
+        },
+        "(10, 211)": {
+            "token": " up",
+            "congruence": 16.6025333404541
+        },
+        "(10, 1453)": {
+            "token": " then",
+            "congruence": 16.474863052368164
+        },
+        "(10, 2680)": {
+            "token": " today",
+            "congruence": 16.298574447631836
+        },
+        "(10, 2408)": {
+            "token": " over",
+            "congruence": 15.52385425567627
+        },
+        "(10, 2003)": {
+            "token": " so",
+            "congruence": 15.502615928649902
+        },
+        "(10, 297)": {
+            "token": " your",
+            "congruence": 15.498408317565918
+        },
+        "(10, 2093)": {
+            "token": " themselves",
+            "congruence": 15.475156784057617
+        },
+        "(10, 1315)": {
+            "token": " down",
+            "congruence": 15.191574096679688
+        },
+        "(10, 1505)": {
+            "token": " then",
+            "congruence": 14.779694557189941
+        },
+        "(10, 3032)": {
+            "token": " it",
+            "congruence": 14.603301048278809
+        },
+        "(10, 2522)": {
+            "token": " after",
+            "congruence": 14.582621574401855
+        },
+        "(10, 304)": {
+            "token": " state",
+            "congruence": 14.55635929107666
+        },
+        "(10, 2149)": {
+            "token": " like",
+            "congruence": 14.31156063079834
+        },
+        "(11, 2003)": {
+            "token": " work",
+            "congruence": 19.076419830322266
+        },
+        "(11, 1605)": {
+            "token": " about",
+            "congruence": 17.310325622558594
+        },
+        "(11, 948)": {
+            "token": " right",
+            "congruence": 16.458057403564453
+        },
+        "(11, 2069)": {
+            "token": " off",
+            "congruence": 15.416085243225098
+        },
+        "(11, 2274)": {
+            "token": " them",
+            "congruence": 14.12161922454834
+        },
+        "(11, 2465)": {
+            "token": " right",
+            "congruence": 13.92478084564209
+        },
+        "(11, 747)": {
+            "token": " her",
+            "congruence": 13.826519966125488
+        },
+        "(11, 2040)": {
+            "token": " or",
+            "congruence": 13.550312042236328
+        },
+        "(11, 1406)": {
+            "token": " only",
+            "congruence": 13.40273380279541
+        },
+        "(11, 2957)": {
+            "token": " on",
+            "congruence": 13.353680610656738
+        },
+        "(11, 967)": {
+            "token": " called",
+            "congruence": 13.09442138671875
+        },
+        "(11, 3015)": {
+            "token": " on",
+            "congruence": 12.623862266540527
+        },
+        "(11, 822)": {
+            "token": " time",
+            "congruence": 12.452217102050781
+        },
+        "(11, 2586)": {
+            "token": " like",
+            "congruence": 12.222989082336426
+        },
+        "(11, 1846)": {
+            "token": " this",
+            "congruence": 12.180536270141602
+        },
+        "(11, 89)": {
+            "token": " number",
+            "congruence": 12.128702163696289
+        },
+        "(11, 2046)": {
+            "token": " made",
+            "congruence": 12.047329902648926
+        },
+        "(11, 907)": {
+            "token": " you",
+            "congruence": 11.068001747131348
+        },
+        "(11, 2763)": {
+            "token": " at",
+            "congruence": 10.957993507385254
+        },
+        "(11, 2546)": {
+            "token": " same",
+            "congruence": 10.469624519348145
+        }
+    }
+}
