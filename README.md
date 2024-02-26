@@ -30,15 +30,17 @@ Explore the analysis of attention-MLP interactions through the provided Jupyter 
 ### Development Setup
 Create a Python Virtual Environment and activate it:
 
-python3.10 -m venv venv
-source venv/bin/activate
+`python3.10 -m venv venv`
+
+`source venv/bin/activate`
 
 Install Dependencies listed in `requirements.txt:`
 
-Explore Source Code: The src directory contains all the necessary scripts for data downloading, model analysis, and visualization.
-Data Scripts: src/data
-Model Analysis: src/models
-Visualization: src/visualization
+### Explore Source Code: 
+The `src` directory contains all the necessary scripts for data downloading, model analysis, and visualization.
+Data Scripts: `src/data`
+Model Analysis: `src/models`
+Visualization: `src/visualization`
 
 #### Modify Path Variables: 
 Adjust path variables in `src/__init__.py` as necessary to point to your data, models, and outputs.
